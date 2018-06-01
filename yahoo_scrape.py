@@ -1,15 +1,11 @@
-from pylab import *
 import pandas as pd
 import numpy as np
 import pandas_datareader.data as web
 import datetime
-import linecache
 import csv
 import atexit
 from time import clock
-import time
 import sqlite3
-from subprocess import call
 from multiprocessing.pool import ThreadPool as Pool
 
 #Stock Data Pull Timeframe
