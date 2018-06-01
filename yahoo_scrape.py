@@ -64,7 +64,6 @@ def Datapull(Stock):
     except:
         print 'Datapull: %s'%Stock	
 
-
 def PoolPull(ticker):
     try:
         conn=sqlite3.connect("stock_history.db")
@@ -78,6 +77,7 @@ def PoolPull(ticker):
     except Exception, e:
         conn.close()
         print 'Main Loop', str(e), ticker
+        
 if __name__=='__main__':
     company = [x.strip() for x in content]
     rsi=pool.map(PoolPull,company)
